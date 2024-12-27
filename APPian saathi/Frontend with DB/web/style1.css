@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container styling */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+/* Login box styling */
+.login-box {
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Form input fields */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Divider for alternative login options */
+.divider {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #999;
+  position: relative;
+}
+
+.divider:before,
+.divider:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 40%;
+  top: 50%;
+  background: #ddd;
+}
+
+.divider:before {
+  left: 0;
+}
+
+.divider:after {
+  right: 0;
+}
+
+/* DigiLocker login button */
+.digilocker-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #1976d2;
+  background-color: #2196f3;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.digilocker-btn:hover {
+  background-color: #1e88e5;
+  border-color: #1565c0;
+}
+
+/* Registration link */
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-link a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appian Saathi</title>
+    <link rel="stylesheet" href="style.css">
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        main {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .hero {
+            background-color: #e0e7f4;
+            padding: 30px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 28px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 10px 0 0;
+        }
+        .search-section {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .search-section input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-section button {
+            padding: 10px;
+            margin-left: 10px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+        .card p {
+            font-size: 16px;
+            margin: 0;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Appian Saathi </h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="Home-link">Sign-In</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="#" id="about-link">About</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a id="profile-link">Profile</a></li>
+            </ul>
+        </nav>
+        
+
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>Welcome to Appian Saathi</h2>
+            <p>Upload and verify your document and make them organised.</p>
+        </div>
+        
+        <div class="search-section">
+            <input type="text" placeholder="Search for documents">
+            <button>Search</button>
+        </div>
+
+        <section class="cards">
+            <div class="card">
+                <img src="media/aadharcard.jpeg" 
+                class="card-image">
+                <h3>AADHAR CARD</h3>
+                <button class="upload-button">Upload</button>
+            </div>
+            <div class="card">
+                <img src="media/debit_Card.jpeg" 
+                class="card-image">
+                <h3>DEBIT CARD</h3>
+                <button class="upload-button">Upload</button>
+            </div>
+            <div class="card">
+                <img src="media/pan card.jpeg" 
+                class="card-image">
+                <h3>PAN CARD</h3>
+                <button class="upload-button">Upload</button>
+            </div>
+            <div class="card">
+                <img src="media/voterid.jpeg" 
+                class="card-image">
+                <h3>VOTER ID</h3>
+                <button class="upload-button">Upload</button>
+            </div>
+            <div class="card">
+                <img src="media/driving.jpeg" 
+                class="card-image">
+                <h3>DRIVING LICENSE</h3>
+                <button class="upload-button">Upload</button>
+            </div>
+            <div class="card">
+                <img src="media/credit.jpeg" 
+                class="card-image">
+                <h3>CREDIT CARD</h3>
+                <button class="upload-button">Upload</button>
+            </div>
+        </section>
+    
+   <div id="signup-modal" class="modal">
+            <div class="modal-content">
+                <div class="close" id="close-modal">&times;</div>
+                <h2>Sign Up</h2>
+                <form id="signup-form" action="signup.jsp" method="post" >
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" placeholder="Enter your contact number">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password">
+                    <label for="DocName">Document name</label>
+                    <input type="text" id="DocName" placeholder="Document Name">
+                    <label for="upload">Upload your document</label>
+                    <input type="file" id="upload" placeholder="Enter your document">
+                    
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; myappian_saathi. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js" charset="UTF-8" ></script>
+
+</body>
+</html>
+
+

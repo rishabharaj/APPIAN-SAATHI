@@ -1,0 +1,10 @@
+{
+    "document_id": 1,
+    "classification": "Invoice",
+    "summary": "This is an invoice for services rendered in December...",
+    "metadata": {
+        "name": "John Doe",
+        "date": "2024-12-25",
+        "amount": "$1000"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "document-processor/project",
+    "description": "A document processing system for financial documents.",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.8",    // For sending emails
+        "aws/aws-sdk-php": "^3.200",     // AWS SDK for S3 integration
+        "phpunit/phpunit": "^9.6"        // PHPUnit for testing
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.21"        // For generating fake data in tests
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-cache"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

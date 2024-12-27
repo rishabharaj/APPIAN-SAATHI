@@ -1,0 +1,31 @@
+<?php
+require_once 'config/config.php';
+
+class FeedbackModel {
+    private $db;
+
+    public function __construct() {
+        $this->db = connectDatabase();
+    }
+
+    // Save feedback
+    public function saveFeedback($documentId, $userId, $feedbackText) {
+        $stmt = $this->db->prepare("INSERT INTO feedback (document_id, user_id, feedback) VALUES (?, ?, ?)");
+        $stmt->bind_param("iis", $documentId, $userId, $feedbackText);
+        if ($stmt->execute()) {
+            return $this->db->insert_id; // Return the inserted feedback ID
+        } else {
+            throw new Exception("Error saving feedback: " . $stmt->error);
+        }
+    }
+
+    // Get feedback for a specific document
+    public function getFeedbackByDocumentId($documentId) {
+        $stmt = $this->db->prepare("SELECT * FROM feedback WHERE document_id = ?");
+        $stmt->bind_param("i", $documentId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+}
+?>
